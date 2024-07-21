@@ -10,6 +10,9 @@ for (let i = 0; i < 10; i++) {
 }
 
 
+console.log(" ==================================================== ");
+
+
 for (let i = 0; i < 10; i++) {
     console.log(`outer loop ${i}`);
     for (let j = 0; j < 10; j++) {
@@ -76,10 +79,40 @@ for (let i = 0; i < 10; i++) {
     
 }
 
+
+console.log(" ==================================================== ");
+
 for (let i = 0; i < 10; i++) {
     console.log(`outer loop ${i}`);
     for (let j = 1; j < 10; j++) {
         console.log(i + '*' + j + '=' + i*j);
         
     }    
+}
+
+console.log(" ======================Break Statement============================== ");
+
+// break and counitnue
+
+for (let index = 1; index <= 20; index++) {
+    if (index == 5) {
+        console.log(`detected ${index}`);
+        break
+    }
+    console.log(`Value of i is ${index}`);
+
+}
+
+
+console.log(" =======================Continue Statement============================= ");
+
+// break and counitnue
+
+for (let index = 1; index <= 20; index++) {
+    if (index == 5) {
+        console.log(`detected ${index}`);
+        continue
+    }
+    console.log(`Value of i is ${index}`);
+
 }
