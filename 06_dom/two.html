@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Akash Thakre </title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div class="parent">
+        <div  id="one" class="days">Monday</div>
+        <div  id="two" class="days">Tuesday</div>
+        <div  id="three" class="days">Wednesday</div>
+        <div  id="four" class="days">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+     
+    }
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.days')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+
+    console.log("NODES: " , parent.childNodes);
+
+</script>
+</html>
+
+<!--
+
+    DOM Traversal: You can navigate the relationships between elements in the DOM (parent, children, siblings).
+    children vs. childNodes: children is a collection of element children, while childNodes includes all node types.
+    querySelector() and querySelectorAll(): These methods are powerful tools for selecting elements based on CSS selectors.
+
+
+--->
