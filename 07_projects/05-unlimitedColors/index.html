@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease; /* Smooth transition */
+        }
+    </style>
+</head>
+<body>
+    <h1>Akash Pralhad Thakre</h1>
+    <button id="start">Start</button>
+    <button id="stop" disabled>Stop</button> 
+
+    <script>
+        function getRandomColor() { // Use camelCase for function names
+            const letters = '0123456789ABCDEF'; // Variable for clarity
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        let intervalId;
+        const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+
+        startButton.addEventListener('click', () => {
+            intervalId = setInterval(() => {  // Arrow function inside setInterval
+                document.body.style.backgroundColor = getRandomColor();
+            }, 1000);
+
+            startButton.disabled = true;
+            stopButton.disabled = false;
+        });
+
+        stopButton.addEventListener('click', () => {
+            clearInterval(intervalId);
+            startButton.disabled = false;
+            stopButton.disabled = true;
+        });
+    </script>
+</body>
+</html>
